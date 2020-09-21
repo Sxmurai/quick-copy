@@ -25,7 +25,7 @@ module.exports = class QuickCopy extends Plugin {
 
             if (content) str += content;
             if (attachments && attachments.length)
-              str += `\n${attachments.map((a) => a.url).join("\n")}`;
+              str += attachments.map((a) => a.url).join("\n");
 
             clipboard.writeText(str ?? "No content");
           },
